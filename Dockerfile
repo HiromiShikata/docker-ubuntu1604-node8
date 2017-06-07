@@ -1,14 +1,14 @@
 FROM ubuntu:16.04
 MAINTAINER hiromis
 
-RUN apt-get update 
-RUN apt-get -y upgrade
-RUN apt-get -y dist-upgrade
-RUN apt-get -y install curl wget build-essential checkinstall libssl-dev nodejs npm 
+RUN apt update 
+RUN apt -y upgrade
+RUN apt -y dist-upgrade
+RUN apt -y install curl wget build-essential checkinstall libssl-dev nodejs npm 
 RUN npm install yarn -g
 RUN npm install n -g
-RUN npm install npm -g
-RUN n stable
-RUN apt-get purge -y nodejs npm
+RUN npm install npm@5.0.0 -g
+RUN n 8.0.0
+RUN apt purge -y nodejs npm
 
 
