@@ -9,6 +9,7 @@ RUN npm install yarn -g
 RUN npm install n -g
 RUN npm install npm@5 -g
 RUN n 8
+
 RUN apt purge -y nodejs npm
 
 
